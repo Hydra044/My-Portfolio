@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Lazaro | Projects</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+/* =================== PROJECTS STYLING =================== */
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+    gap: 40px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 36px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideUp 0.8s forwards;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    max-width: 800px;
+    transition: 0.3s;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    opacity: 0;
+    animation: slideUp 0.8s forwards;
+}
+
+.project-card img {
+    width: 250px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.8);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(56, 189, 248, 0.1);
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-card h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #cbd5f5;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-stack span {
+    background: #0ea5e9;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tech-stack span:hover {
+    transform: scale(1.1);
+}
+
+/* Fade-in delay for multiple cards */
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.4s; }
+.project-card:nth-child(4) { animation-delay: 0.6s; }
+
+/* Slide-up animation */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .projects-section h2 {
+        font-size: 28px;
+    }
+
+    .project-card h3 {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="hardware-bg">
+    <div class="circuit-nodes"></div>
+</div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">proyekto ng malulupit</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="navbar-right">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/john.lazaro.101817" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://msng.link/o?+639755653153=vi"><i class="fab fa-viber"></i></a>
+            <a href="https://wa.me/+639755653153" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button id="darkToggle">🌙</button>
+    </div>
+</nav>
+
+<!-- PROJECTS SECTION -->
+<section class="projects-section">
+    <h2>My Projects</h2>
+
+    <!-- Capstone Project -->
+    <div class="project-card">
+        <img src="Images/capstone.png" alt="Restaurant Web System">
+        <div class="project-content">
+            <h3>Capstone Project: Restaurant Web System</h3>
+            <p>
+                Designed and developed a restaurant web system with online ordering, inventory tracking, AI chatbot support, 
+                and SMS notifications. Users can customize meals and receive real-time updates.
+            </p>
+            <div class="tech-stack">
+                <span>MySQL</span>
+                <span>PHP</span>
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>XAMPP</span>
+                <span>Cohere AI API</span>
+                <span>SMS Gateway</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- OJT Task Example -->
+    <div class="project-card">
+        <img src="Images/fixingPSU.png" alt="OJT Task 1">
+        <div class="project-content">
+            <h3>OJT Task: Troubleshooting IT Hardware</h3>
+            <p>
+                Performed hardware troubleshooting including printer repair, network setup, and system diagnostics. 
+                Ensured devices were fully functional and documented the process.
+            </p>
+            <div class="tech-stack">
+                <span>Printer Repair</span>
+                <span>Networking</span>
+                <span>Hardware Diagnostics</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- OJT Task Example 2 -->
+    <div class="project-card">
+        <img src="Images/Reimage.png" alt="OJT Task 2">
+        <div class="project-content">
+            <h3>OJT Task: Software Installation & Maintenance</h3>
+            <p>
+                Installed and configured software applications, updated systems, and performed troubleshooting for software errors. 
+                Maintained records of all installations and updates.
+            </p>
+            <div class="tech-stack">
+                <span>Windows</span>
+                <span>MS Office</span>
+                <span>System Updates</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+
+    // Apply saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    // Dark mode toggle
+    const toggle = document.getElementById('darkToggle');
+    if (toggle) {
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+        });
+    }
+});
+</script>
+</body>
+</html>

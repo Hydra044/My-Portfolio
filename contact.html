@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Lazaro | Contact</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+/* =================== CONTACT STYLING =================== */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 70vh;
+    gap: 30px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.contact-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    min-width: 250px;
+    text-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(56, 189, 248, 0.1);
+}
+
+.contact-card i {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.contact-card p, .contact-card a, .contact-card span {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: #0ea5e9;
+}
+
+.btn-map {
+    margin-top: 20px;
+    background: #38bdf8;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-map:hover {
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="hardware-bg">
+    <div class="circuit-nodes"></div>
+</div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">you can call me anytime for u</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="navbar-right">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/john.lazaro.101817" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://msng.link/o?+639755653153=vi"><i class="fab fa-viber"></i></a>
+            <a href="https://wa.me/+639755653153" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button id="darkToggle">🌙</button>
+    </div>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-cards">
+        <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <p>Email</p>
+            <a href="mailto:lazarojohn044@gmail.com">lazarojohn044@gmail.com</a>
+        </div>
+        <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <p>Phone</p>
+            <a href="tel:+639755653153">09755653153</a>
+        </div>
+        <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Location</p>
+            <span>11 B. Santos St, Marikina City, Metro Manila</span>
+        </div>
+    </div>
+
+    <!-- Clickable Google Maps Link -->
+    <a class="btn-map" href="https://www.google.com/maps/place/11+B.+Santos+St,+Marikina,+1800+Metro+Manila" target="_blank">
+        View on Google Maps
+    </a>
+</section>
+
+<!-- Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+
+    // Apply saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    // Dark mode toggle
+    const toggle = document.getElementById('darkToggle');
+    if (toggle) {
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+        });
+    }
+});
+</script>
+</body>
+</html>
